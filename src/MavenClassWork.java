@@ -25,6 +25,35 @@ public class MavenClassWork extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
+		//1.create and configure user interface control
+		
+		//name label
+		Label helloLabel=new Label("Enter your name");
+		
+		//name Textbox
+		TextField textbox=new TextField();
+		
+		//button
+		Button addButton=new Button();
+		addButton.setText("Click Me!");
+		
+		//2.Make a layout manager
+		VBox verticalBox=new VBox();
+		
+		//3.Add controls to the layout manager
+		   //Always add your control in the same order as you want
+		verticalBox.getChildren().add(helloLabel);    //getchildren is a function in box that is called and label is added by .add
+		verticalBox.getChildren().add(textbox);
+		verticalBox.getChildren().add(addButton);
+		
+		//4.Add layout manager to scene
+		//5.Add scene to the stage
+		primaryStage.setScene(new Scene(verticalBox,300,300)); //layout manager go inside scene which go inside a stage
+		primaryStage.setTitle("Example");
+		
+		//6.Show the app
+		primaryStage.show();
+		
 		
 	}
 
