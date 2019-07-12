@@ -45,7 +45,16 @@ public class MavenClassWork extends Application {
 		    @Override
 		    public void handle(ActionEvent e) {
 		        // Logic for what should happen when you push button
-		    	System.out.println("Hello guys!!");
+		    	
+		    	//1.Get whatever they typed in textbox
+		    	String name= textbox.getText();
+		    	
+		    	//2.Display hello in the console
+		    	System.out.println("Hello " + name);
+		    	
+		    	//3.clear the textboc when we get everything on console
+		    	textbox.setText("");
+		    	
 		    }
 		});
 		
