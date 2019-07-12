@@ -29,16 +29,29 @@ public class MavenClassWork extends Application {
 		
 		//name label
 		Label helloLabel=new Label("Enter your name");
+		helloLabel.getTextFill();  //add color to text as it is prpperty
 		
 		//name Textbox
 		TextField textbox=new TextField();
 		
 		//button
+	
 		Button addButton=new Button();
 		addButton.setText("Click Me!");
 		
+		//Button click handler = code you want ot run when a person clicks on it
+		
+		addButton.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override
+		    public void handle(ActionEvent e) {
+		        // Logic for what should happen when you push button
+		    	System.out.println("Hello guys!!");
+		    }
+		});
+		
 		//2.Make a layout manager
 		VBox verticalBox=new VBox();
+		verticalBox.setSpacing(30);   //add space in lines
 		
 		//3.Add controls to the layout manager
 		   //Always add your control in the same order as you want
@@ -48,7 +61,7 @@ public class MavenClassWork extends Application {
 		
 		//4.Add layout manager to scene
 		//5.Add scene to the stage
-		primaryStage.setScene(new Scene(verticalBox,300,300)); //layout manager go inside scene which go inside a stage
+		primaryStage.setScene(new Scene(verticalBox,300,300)); //layout manager go inside scene which go inside a stage;Scene can control the width and height of object
 		primaryStage.setTitle("Example");
 		
 		//6.Show the app
